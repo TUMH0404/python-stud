@@ -17,8 +17,11 @@
 ## 📁 フォルダ構成
 sample-stud
 ├─ start_python_history.bat # Windows起動用
+
 ├─ history_repl.py # 履歴保存ロジック
+
 ├─ requirements.txt # 必要ライブラリ
+
 └─ env/ # 仮想環境（自動生成）
 
 ---
