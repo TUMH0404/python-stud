@@ -36,6 +36,8 @@ sample-stud
 >>> a = 10
 >>> b = 20
 >>> a + b
+```
+
 
 ---
 ### ✔ Pythonのインストール
@@ -54,5 +56,5 @@ Pythonがインストールされている必要があります。
 
 #### Windows
 
-```powershell
+powershell
 python --version
