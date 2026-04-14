@@ -79,3 +79,9 @@ Pythonがインストールされている必要があります。
 ```powershell
 python --version
 ```
+
+### ✔ Visual Studio Code(Windows)
+
+以下のリンクからインストール（いずれ使用する）
+
+https://code.visualstudio.com/sha/download?build=stable&os=win32-x64-user
