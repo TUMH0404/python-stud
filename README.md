@@ -63,6 +63,12 @@ Pythonがインストールされている必要があります。
 - **Python 3.11（推奨）**
 - Python 3.10〜3.14 で動作確認済み
 
+### ✔ Pythonのインストール（Windows）
+
+以下のリンクからPythonをインストールしてください：
+
+👉 https://www.python.org/ftp/python/3.14.4/python-3.14.4-amd64.exe
+
 
 ---
 
