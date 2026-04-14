@@ -26,8 +26,8 @@ sample-stud
 
 ### ▶ Windows
 
-1. 
-2. `start_python_history.bat` をダブルクリック  
+1. https://github.com/TUMH0404/python-stud-win.git
+2. python-stud-winにある`start_python_history.bat` をダブルクリック  
 3. 新しいコマンドプロンプトが開く  
 4. Pythonが起動  
 
