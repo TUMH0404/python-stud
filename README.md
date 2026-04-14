@@ -16,6 +16,7 @@
 
 ## 📁 フォルダ構成
 sample-stud
+
 ├─ start_python_history.bat # Windows起動用
 
 ├─ history_repl.py # 履歴保存ロジック
