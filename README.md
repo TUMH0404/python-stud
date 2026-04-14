@@ -23,7 +23,7 @@ sample-stud
 
 ├─ requirements.txt # 必要ライブラリ
 
-└─ env/ # 仮想環境（自動生成）
+└─ start_python_history.command # mac起動用
 
 ---
 
@@ -38,12 +38,22 @@ sample-stud
 ### ✔ 方法①（推奨：git）
 
 ```bash
-git clone https://github.com/TUMH0404/python-stud-win.git
+git clone https://github.com/TUMH0404/python-stud.git
 ```
 取得後
 ```bash
-cd python-stud-win
+cd python-stud
 ```
+
+macの場合
+
+ターミナル起動後、以下を実行する
+```bash
+chmod +x start_python_history.command
+./start_python_history.command
+```
+
+
 
 入力終了後、exit()で保存される。
 ```python
