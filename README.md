@@ -60,8 +60,9 @@ chmod +x start_python_history.command
 
 `>>>`が表示されれば成功！
 
+課題の過程が記録される。
 
-入力終了後、exit()で保存される。
+exit()で保存される。
 ```python
 >>> a = 10
 >>> b = 20
@@ -79,25 +80,35 @@ Pythonがインストールされている必要があります。
 - **Python 3.11（推奨）**
 - Python 3.10〜3.14 で動作確認済み
 
-### ✔ Pythonのインストール（Windows）
+### ✔ Pythonのインストール
 
-以下のリンクからPythonをインストールしてください：
+以下のリンクでインストーラーがダウンロードされるので、ダブルクリックしてインストールしてください。
+
+win
 
 👉 https://www.python.org/ftp/python/3.14.4/python-3.14.4-amd64.exe
 
+Mac
+
+👉 https://www.python.org/downloads/release/python-3144/
 
 ---
 
 ### ✔ Pythonの確認方法
 
-#### Windows
-
 ```powershell
 python --version
 ```
 
-### ✔ Visual Studio Code(Windows)
+### ✔ Visual Studio Code
 
-以下のリンクからインストール（いずれ使用する）
+以下のリンクでインストーラーがダウンロードされるので、ダブルクリックしてインストールしてください。
 
-https://code.visualstudio.com/sha/download?build=stable&os=win32-x64-user
+win
+
+👉 https://code.visualstudio.com/sha/download?build=stable&os=win32-x64-user
+
+
+mac
+
+👉 https://code.visualstudio.com/sha/download?build=stable&os=darwin-universal-dmg
