@@ -13,10 +13,10 @@ echo "仮想環境を有効化しています..."
 source "$VENV_DIR/bin/activate"
 
 echo "必要なライブラリを確認しています..."
-python -m pip install --upgrade pip
-python -m pip install -r "$BASE_DIR/requirements.txt"
+python3 -m pip install --upgrade pip
+python3 -m pip install -r "$BASE_DIR/requirements.txt"
 
 export PYTHONSTARTUP="$BASE_DIR/history_repl.py"
 
 echo "Pythonを起動します..."
-python
+python3
