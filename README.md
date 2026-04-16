@@ -53,7 +53,7 @@ powershell起動後、以下を実行する
 ターミナル起動後、以下を実行する
 ```bash
 chmod +x start_python_history.command
-./start_python_history.command
+source ./start_python_history.command
 ```
 
 `>>>`が表示されれば成功！
