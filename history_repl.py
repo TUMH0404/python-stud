@@ -4,7 +4,7 @@ from datetime import datetime
 
 base_dir = os.path.dirname(os.path.abspath(__file__))
 ts = datetime.now().strftime("%Y%m%d_%H%M%S")
-histfile = os.path.join(base_dir, f"python_history_{ts}.txt")
+histfile = os.path.join(base_dir, f"提出ファイル_python_history_{ts}.txt")
 
 banner = "\n".join([
     "======================================",
