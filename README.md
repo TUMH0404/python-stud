@@ -59,7 +59,7 @@ chmod +x start_python_history.command
 ##### winの場合
 ```powershell
 cd $HOME
-Remove-Item "main", "main.zip" -Recurse -Force -ErrorAction SilentlyContinue
+Remove-Item "python-stud-main", "main.zip" -Recurse -Force -ErrorAction SilentlyContinue
 Invoke-WebRequest -Uri "https://github.com/TUMH0404/python-stud/archive/refs/heads/main.zip" -OutFile "main.zip"
 Expand-Archive main.zip -DestinationPath .
 cd ./python-stud-main
