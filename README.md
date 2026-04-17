@@ -55,6 +55,14 @@ powershell起動後、以下を実行する
 chmod +x start_python_history.command
 source ./start_python_history.command
 ```
+zipから
+```zsh
+curl -L -O https://github.com/TUMH0404/python-stud/archive/refs/heads/main.zip
+unzip main.zip
+cd python-stud-main
+chmod +x start_python_history.command
+./start_python_history.command
+```
 
 `>>>`が表示されれば成功！
 
