@@ -57,15 +57,14 @@ chmod +x start_python_history.command
 ```
 #### ✔ 方法②（zip）
 ##### winの場合
-bash```
+```powershell
 curl -L -O https://github.com/TUMH0404/python-stud/archive/refs/heads/main.zip
 unzip main.zip
 cd python-stud-main
 ./start_python_history.bat
 ```
-
 ##### macの場合
-```zsh
+```bash
 curl -L -O https://github.com/TUMH0404/python-stud/archive/refs/heads/main.zip
 unzip main.zip
 cd python-stud-main
