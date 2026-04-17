@@ -55,7 +55,16 @@ powershell起動後、以下を実行する
 chmod +x start_python_history.command
 ./start_python_history.command  # or source ./start_python_history.command
 ```
-zipから
+#### ✔ 方法②（zip）
+##### winの場合
+bash```
+curl -L -O https://github.com/TUMH0404/python-stud/archive/refs/heads/main.zip
+unzip main.zip
+cd python-stud-main
+./start_python_history.bat
+```
+
+##### macの場合
 ```zsh
 curl -L -O https://github.com/TUMH0404/python-stud/archive/refs/heads/main.zip
 unzip main.zip
