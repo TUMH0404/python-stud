@@ -74,10 +74,10 @@ chmod +x start_python_history.command
 ./start_python_history.command  # or source ./start_python_history.command
 ```
 
+
+`>>>`が表示されればおそらく成功！
+
 ---
-
-`>>>`が表示されれば成功！
-
 
 #### ✔ 演習課題に取り組む
 課題の過程が記録される。
