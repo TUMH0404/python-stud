@@ -30,6 +30,7 @@ echo ""
 echo "3. Cloning repository..."
 cd ~/Documents
 git clone https://github.com/TUMH0404/python-stud.git
+cd ~/python-stud
 
 echo ""
 echo "All done."
