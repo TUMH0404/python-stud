@@ -28,7 +28,7 @@ git --version
 
 echo ""
 echo "3. Cloning repository..."
-cd ~/Desktop
+cd ~/Documents
 git clone https://github.com/TUMH0404/python-stud.git
 
 echo ""
