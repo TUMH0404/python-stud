@@ -23,7 +23,7 @@ cd "$HOME/Documents" || exit 1
 echo ""
 echo "3. Checking Git..."
 
-if ! command -v git &> /dev/null; then
+if ! command -v git >/dev/null 2>&1; then
     echo "Git is not installed."
     echo "Please run 'git' once and follow the installation instructions."
     exit 1
