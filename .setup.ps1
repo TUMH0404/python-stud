@@ -34,6 +34,7 @@ Write-Host ""
 Write-Host "4. Cloning sample repository..."
 Set-Location "$env:USERPROFILE\Documents"
 & $GIT clone https://github.com/TUMH0404/python-stud.git
+Set-Location "$env:USERPROFILE\Documents\python-stud"
 
 Write-Host ""
 Write-Host "All done."
