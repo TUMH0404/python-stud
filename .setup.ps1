@@ -161,7 +161,10 @@ try {
     # -------------------------
     Write-Step "6. Entering repository..."
     Set-Location $TargetDir
-
+    
+    # PATHを現在のセッションにも反映
+    $env:Path += ";$env:LOCALAPPDATA\PortableGit\cmd"
+    
     Write-Host ""
     Write-Host "Setup completed successfully." -ForegroundColor Green
     Write-Host "Repository: $TargetDir" -ForegroundColor Green
