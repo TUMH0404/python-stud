@@ -1,4 +1,17 @@
 $ErrorActionPreference = "Stop"
+$TARGET = "$env:USERPROFILE\Documents\python-stud"
+
+Set-Location "$env:USERPROFILE\Documents"
+
+
+if (Test-Path $TARGET) {
+Remove-Item -Recurse -Force $TARGET 
+Write-Host "Folder deleted." } 
+else 
+{ 
+Write-Host "Folder does not exist."
+}
+
 
 # =========================
 # Settings
