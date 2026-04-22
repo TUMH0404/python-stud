@@ -1,25 +1,12 @@
 $TARGET = "$env:USERPROFILE\Documents\python-stud"
 
-# Gitを探す（PATH優先）
-$GIT = (Get-Command git -ErrorAction SilentlyContinue)?.Source
+Write-Host "====================================="
+Write-Host "  Git + Clone Setup (Windows)"
+Write-Host "====================================="
 
-# 見つからなければ代表的な場所を探す
-if (-not $GIT) {
-    $candidates = @(
-        "$env:ProgramFiles\Git\bin\git.exe",
-        "$env:LOCALAPPDATA\Programs\Git\bin\git.exe",
-        "$env:USERPROFILE\tools\git\cmd\git.exe"
-    )
+Write-Host ""
+Write-Host "1. Checking existing folder..."
 
-    foreach ($path in $candidates) {
-        if (Test-Path $path) {
-            $GIT = $path
-            break
-        }
-    }
-}
-
-# フォルダ削除
 if (Test-Path $TARGET) {
     Remove-Item -Recurse -Force $TARGET
     Write-Host "Folder deleted."
@@ -27,16 +14,33 @@ if (Test-Path $TARGET) {
     Write-Host "Folder does not exist."
 }
 
-# Documentsへ移動
+Write-Host ""
+Write-Host "2. Moving to Documents..."
 Set-Location "$env:USERPROFILE\Documents"
 
-# Git実行
-if ($GIT) {
-    & $GIT clone https://github.com/TUMH0404/python-stud.git
-} else {
-    Write-Host "Git executable not found."
+Write-Host ""
+Write-Host "3. Checking Git..."
+
+if (-not (Get-Command git -ErrorAction SilentlyContinue)) {
+    Write-Host "Git is not installed."
+    Write-Host "Please install Git first."
     exit 1
 }
 
-# フォルダ移動
+Write-Host ""
+Write-Host "4. Cloning repository..."
+
+try {
+    git clone https://github.com/TUMH0404/python-stud.git
+    Write-Host "Clone successful."
+} catch {
+    Write-Host "Clone failed."
+    exit 1
+}
+
+Write-Host ""
+Write-Host "5. Moving into project folder..."
 Set-Location $TARGET
+
+Write-Host ""
+Write-Host "All done."
