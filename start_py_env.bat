@@ -24,3 +24,6 @@ if not exist "%VENV_DIR%\Scripts\python.exe" (
 
 echo 仮想環境を有効化しています...
 call "%VENV_DIR%\Scripts\activate.bat"
+
+echo 作成しました: %PYFILE%
+echo 仮想環境が有効になりました。
