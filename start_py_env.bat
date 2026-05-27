@@ -27,7 +27,9 @@ call "%VENV_DIR%\Scripts\activate.bat"
 
 
 REM ===== 現在時刻取得 =====
-for /f %%i in ('powershell -NoProfile -Command "Get-Date -Format yyyyMMdd_HHmmss"') do set DT=%%i
+for /f "delims=" %%i in ('powershell -NoProfile -Command "Get-Date -Format yyyyMMdd_HHmmss"') do (
+    set "DT=%%i"
+)
 
 REM ===== Pythonファイル名 =====
 set "PYFILE=%BASE_DIR%sample_%DT%.py"
