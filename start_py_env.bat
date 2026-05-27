@@ -25,19 +25,18 @@ if not exist "%VENV_DIR%\Scripts\python.exe" (
 echo 仮想環境を有効化しています...
 call "%VENV_DIR%\Scripts\activate.bat"
 
-
-REM ===== 現在時刻取得 =====
 for /f "delims=" %%i in ('powershell -NoProfile -Command "Get-Date -Format yyyyMMdd_HHmmss"') do (
     set "DT=%%i"
 )
 
-REM ===== Pythonファイル名 =====
-set "PYFILE=%BASE_DIR%sample_%DT%.py"
+set "PYFILE=%BASE_DIR%python_%DT%.py"
 
-REM ===== Pythonファイル作成 =====
-echo print("Hello Python") > "%PYFILE%"
+(
+echo # -*- coding: utf-8 -*-
+echo print("Hello Python")
+) > "%PYFILE%"
 
-echo 作成されたPythonファイル:
-echo %PYFILE%
+echo 作成しました: %PYFILE%
+echo 仮想環境が有効になりました。
 
-cmd
+cmd /k
