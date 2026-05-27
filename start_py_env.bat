@@ -25,18 +25,6 @@ if not exist "%VENV_DIR%\Scripts\python.exe" (
 echo 仮想環境を有効化しています...
 call "%VENV_DIR%\Scripts\activate.bat"
 
-::echo 必要なライブラリを確認しています...
-::python -m pip install --upgrade pip
-::python -m pip install -r "%REQ_FILE%"
-
-::echo Python を起動します...
-::python "%BASE_DIR%history_repl.py"
-
-::echo Pythonを終了しました。
-::pause
-::endlocal
-::exit
-
 
 REM ===== 現在時刻取得 =====
 for /f %%i in ('powershell -NoProfile -Command "Get-Date -Format yyyyMMdd_HHmmss"') do set DT=%%i
