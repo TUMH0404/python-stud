@@ -24,8 +24,3 @@ if not exist "%VENV_DIR%\Scripts\python.exe" (
 
 echo 仮想環境を有効化しています...
 call "%VENV_DIR%\Scripts\activate.bat"
-
-powershell -NoProfile -ExecutionPolicy Bypass -Command "$dt=Get-Date -Format 'yyyyMMdd_HHmmss'; $file=Join-Path $env:BASE_DIR ('python_' + $dt + '.py'); Set-Content -Path $file -Encoding UTF8 -Value '# -*- coding: utf-8 -*-','print(\"Hello Python\")'; Write-Host ('作成しました: ' + $file)"
-
-echo 仮想環境が有効になりました。
-cmd /k
