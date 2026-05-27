@@ -27,3 +27,4 @@ call "%VENV_DIR%\Scripts\activate.bat"
 
 echo 作成しました: %PYFILE%
 echo 仮想環境が有効になりました。
+cmd /k
