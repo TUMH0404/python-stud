@@ -31,10 +31,8 @@ for /f "delims=" %%i in ('powershell -NoProfile -Command "Get-Date -Format yyyyM
 
 set "PYFILE=%BASE_DIR%python_%DT%.py"
 
-(
-echo # -*- coding: utf-8 -*-
-echo print("Hello Python")
-) > "%PYFILE%"
+echo # -*- coding: utf-8 -*- > "%PYFILE%"
+echo print^("Hello Python"^) >> "%PYFILE%"
 
 echo 作成しました: %PYFILE%
 echo 仮想環境が有効になりました。
