@@ -1,21 +1,34 @@
 @echo off
+chcp 65001 > nul
+setlocal
 
-if not exist "env\Scripts\python.exe" (
-    python -m venv env
+set "BASE_DIR=%~dp0"
+set "VENV_DIR=%BASE_DIR%env"
+set "REQ_FILE=%BASE_DIR%requirements.txt"
+set "PYTHON_CMD=python"
+
+where py > nul 2>&1
+if %errorlevel%==0 (
+    py -3.11 -V > nul 2>&1
+    if %errorlevel%==0 (
+        set "PYTHON_CMD=py -3.14"
+    ) else (
+        set "PYTHON_CMD=py"
+    )
 )
 
-call env\Scripts\activate.bat
+if not exist "%VENV_DIR%\Scripts\python.exe" (
+    echo 仮想環境を作成しています...
+    %PYTHON_CMD% -m venv "%VENV_DIR%"
+)
 
-for /f %%i in ('powershell -NoProfile -Command "Get-Date -Format yyMMdd_HHmmss"') do set FILE=%%i_main.py
+echo 仮想環境を有効化しています...
+call "%VENV_DIR%\Scripts\activate.bat"
 
-(
-    echo # Created: %date% %time%
-    echo.
-    echo print("Hello Python")
-) > "%FILE%"
-
-echo Created: %FILE%
-
-python "%FILE%"
+echo 必要なライブラリを確認しています...
+python -m pip install --upgrade pip
+python -m pip install -r "%REQ_FILE%"
 
 pause
+endlocal
+exit
