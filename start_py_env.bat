@@ -1,5 +1,12 @@
-python -m venv env
+@echo off
 
-set "VENV_DIR=%BASE_DIR%env"
-echo 仮想環境を有効化しています...
-call "%VENV_DIR%\Scripts\activate.bat"
+cd /d "%~dp0"
+
+if not exist "env\Scripts\python.exe" (
+    echo 仮想環境を作成しています...
+    python -m venv env
+) else (
+    echo 仮想環境は既に存在します。
+)
+
+pause
