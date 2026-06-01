@@ -6,14 +6,16 @@ if not exist "env\Scripts\python.exe" (
 
 call env\Scripts\activate.bat
 
-if not exist "main.py" (
-    (
-        echo # Created: %date% %time%
-        echo.
-        echo print("Hello Python")
-    ) > main.py
-)
+for /f %%i in ('powershell -NoProfile -Command "Get-Date -Format yyMMdd_HHmmss"') do set FILE=%%i_main.py
 
-python main.py
+(
+    echo # Created: %date% %time%
+    echo.
+    echo print("Hello Python")
+) > "%FILE%"
+
+echo Created: %FILE%
+
+python "%FILE%"
 
 pause
