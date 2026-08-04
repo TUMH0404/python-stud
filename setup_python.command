@@ -23,4 +23,5 @@ else
     echo "Already set up. Starting Jupyter Lab..."
 fi
 
+cd "$PYTHON_DIR"
 "$PYTHON_BIN" -m jupyter lab
